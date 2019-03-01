@@ -4,8 +4,13 @@ pipeline {
 	stages{
 	 stage('Build time'){
 		steps {
-		 echo 'Im build something'
+		 echo 'Im building something'
 			}
 		}
+	stage(Validate){
+		steps {
+		 echo 'Validate' 
+		}
+}
 	}
 }
