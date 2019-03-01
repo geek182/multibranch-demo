@@ -11,7 +11,7 @@ pipeline {
 	}
 	stage('Validate'){
 		steps {
-		 echo 'Validate and ${env.THIS_IS_VAR}' 
+		 echo "Validate and ${env.THIS_IS_VAR}"
 		}
 	}
 	stage('Delivery on Dev'){
