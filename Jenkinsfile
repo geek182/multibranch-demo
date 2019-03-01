@@ -3,6 +3,9 @@ pipeline {
 	environment {
 	THIS_IS_VAR = 'Iwasset'
 	}
+	parameters {
+        string(name: 'THIS_IS_PARAM', defaultValue: 'DEV ENV', description: 'Set by params')
+    }
 	stages{
 	 stage('Build time'){
 		steps {
@@ -19,7 +22,7 @@ pipeline {
 	 branch 'develop' 
 	}
 		steps{
-		echo 'Only on Develop'
+		echo "Only on Develop and received ${params.THIS_IS_PARAM}"
 		}	
 	}
 	stage('Delivery'){
@@ -30,5 +33,5 @@ pipeline {
 	 	 echo 'Only on master'
 		}
 	}	
-   }
+    }
 }
