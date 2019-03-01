@@ -7,12 +7,12 @@ pipeline {
 		 echo 'Im building something'
 			}
 		}
-	stage(Validate){
+	stage('Validate'){
 		steps {
 		 echo 'Validate' 
 		}
 	}
-	stage(Delivery on Dev){
+	stage('Delivery on Dev'){
 	when {
 	 branch 'develop' 
 	}
@@ -20,7 +20,7 @@ pipeline {
 		echo 'Only on Develop'
 		}	
 }
-	stage(Delivery){
+	stage('Delivery'){
 	when {
 	 branch 'master'
 	}
