@@ -4,7 +4,7 @@ pipeline {
 	stages{
 	 stage('Build time'){
 		steps {
-		 echo 'I/'m build something'
+		 echo 'Im build something'
 			}
 		}
 	}
