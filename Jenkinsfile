@@ -12,6 +12,14 @@ pipeline {
 		 echo 'Validate' 
 		}
 	}
+	stage(Delivery on Dev){
+	when {
+	 branch 'develop' 
+	}
+		steps{
+		echo 'Only on Develop'
+		}	
+}
 	stage(Delivery){
 	when {
 	 branch 'master'
