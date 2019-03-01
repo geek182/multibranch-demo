@@ -11,14 +11,14 @@ pipeline {
 		steps {
 		 echo 'Validate' 
 		}
-}
+	}
 	stage(Delivery){
 	when {
 	 branch 'master'
 	}
-	steps{
-	 echo 'Only on master'
-}
-}
+		steps{
+	 	 echo 'Only on master'
+		}
+	    }	
 	}
 }
