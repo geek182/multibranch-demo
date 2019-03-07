@@ -9,7 +9,7 @@ pipeline {
 	stages{
 	 stage('Build time'){
 		steps {
-		 echo "Im building something, build number ${env.BUILD_ID} on ${env.JENKINS_URL}"
+		 echo "Im building something, build number ${env.BUILD_ID} on ${env.JENKINS_URL} using the node ${env.NODE_NAME}"
 			}
 	}
 	stage('Validate'){
